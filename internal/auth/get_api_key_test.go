@@ -25,7 +25,7 @@ func TestGetAPIKeyValid(t *testing.T) {
 func TestGetAPIKeyInvalid(t *testing.T) {
 	headers := http.Header{}
 
-	key, err := GetAPIKey(headers)
+	_, err := GetAPIKey(headers)
 
 	if err == nil {
 		t.Fatalf("expected an err, but got nil")
